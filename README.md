@@ -65,6 +65,6 @@ Finally you need a grammar file, this uses a rather cumbresome sintax so please 
 
 ## Documentation
 
-[QR Documentation](https://git.hsr.io/edgar_vazquez/HSR_PUMAS/tree/tamagoya/catkin_ws/src/vision/qr_reader)
+[QR Documentation](https://github.com/takeshisToCoding/Takeshi-Documentation/tree/master/catkin_ws/src/vision/qr_reader)
 
-[Human Follower Documentation](https://git.hsr.io/edgar_vazquez/HSR_PUMAS/tree/tamagoya/catkin_ws/src/hri/human_following)
+[Human Follower Documentation](https://github.com/takeshisToCoding/Takeshi-Documentation/tree/master/catkin_ws/src/hri/human_following)
