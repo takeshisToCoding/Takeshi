@@ -1,0 +1,10 @@
+ - builder: sphinx
+   sphinx_root_dir: ../../../../../docs/source/
+   use_mdfile_as_mainpage: README.md
+   file_patterns: '*.c *.cpp *.h *.hpp'
+   output_dir: sphinx_docs
+ - builder: doxygen
+   name: C++ API
+   output_dir: C++_docs
+   file_patterns: '*.c *.cpp *.h *.hpp'
+   use_mdfile_as_mainpage: README.md
