@@ -17,6 +17,7 @@ Robot performance and code
 
 Guide
 ^^^^^^^
+Hola...
 
 
 Contents:
@@ -26,6 +27,7 @@ Contents:
 
    license
    help
+   readme
 
 
 Indices and tables
