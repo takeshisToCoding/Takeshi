@@ -1,0 +1,19 @@
+actions: []
+authors: ''
+brief: ''
+bugtracker: ''
+depends:
+- catkin
+- roscpp
+- std_msgs
+- takeshi_tools
+- rospy
+- geometry_msgs
+description: The human_follower package
+license: TODO
+maintainers: marco <marco@todo.todo>
+msgs: []
+package_type: package
+repo_url: ''
+srvs: []
+url: ''
