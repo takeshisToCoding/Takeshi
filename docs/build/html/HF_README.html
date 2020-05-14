@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Human Follower &#8212; Robot Takeshi 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="ROBOT TAKESHI" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="index.html" title="ROBOT TAKESHI"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Robot Takeshi 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="human-follower">
+<h1>Human Follower<a class="headerlink" href="#human-follower" title="Permalink to this headline">¶</a></h1>
+<p>This work was developed for PUMAS team as a degree work for some National Autonomous University of Mexico. This work is based on leg_finder algorithms and some trackers.</p>
+<p>The package contains two ROS nodes, <code class="docutils literal notranslate"><span class="pre">human_follower</span></code> and <code class="docutils literal notranslate"><span class="pre">leg_finder</span></code>, these two ROS node contain some publisher and subscribers very useful.</p>
+<div class="section" id="leg-finder">
+<h2><code class="docutils literal notranslate"><span class="pre">leg_finder</span></code><a class="headerlink" href="#leg-finder" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Publishers:</p>
+<ul>
+<li><p>legs_found</p>
+<ul>
+<li><p>topic_name: <code class="docutils literal notranslate"><span class="pre">/hri/leg_finder/legs_found</span></code></p></li>
+<li><p>topic_type: <code class="docutils literal notranslate"><span class="pre">std_msgs::Bool</span></code></p></li>
+</ul>
+</li>
+<li><p>legs_pose</p>
+<ul>
+<li><p>topic_name:  <code class="docutils literal notranslate"><span class="pre">/hri/leg_finder/leg_poses</span></code></p></li>
+<li><p>topic_type:  <code class="docutils literal notranslate"><span class="pre">geometry_msgs::Marker</span></code></p></li>
+</ul>
+</li>
+<li><p>legs_hypotesis</p>
+<ul>
+<li><p>topic_name: <code class="docutils literal notranslate"><span class="pre">/hri/visualization_marker</span></code></p></li>
+<li><p>topic_type:  <code class="docutils literal notranslate"><span class="pre">visualization_msgs::Marker</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Subscriber:</p>
+<ul>
+<li><p>laser_scan</p>
+<ul>
+<li><p>topic_name:  <code class="docutils literal notranslate"><span class="pre">/hsrb/base_scan</span></code></p></li>
+<li><p>topic_type:   <code class="docutils literal notranslate"><span class="pre">sensor_msgs::LaserScan</span></code></p></li>
+</ul>
+</li>
+<li><p>leg_finder_enable</p>
+<ul>
+<li><p>topic_name: <code class="docutils literal notranslate"><span class="pre">/hri/leg_finder/enable</span></code></p></li>
+<li><p>topic_type: <code class="docutils literal notranslate"><span class="pre">std_msds::Bool</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h2><code class="docutils literal notranslate"><span class="pre">human_follower</span></code><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Publishers:</p>
+<ul>
+<li><p>cmd_velocity</p>
+<ul>
+<li><p>topic_name: <code class="docutils literal notranslate"><span class="pre">/hsrb/command_velocity</span></code></p></li>
+<li><p>topic_type: <code class="docutils literal notranslate"><span class="pre">geometry_msgs::Twist</span></code></p></li>
+</ul>
+</li>
+<li><p>head_pose</p>
+<ul>
+<li><p>topic_name: <code class="docutils literal notranslate"><span class="pre">/manipulation/manip_pln/hd_goto_angles</span></code></p></li>
+<li><p>topic_type:  <code class="docutils literal notranslate"><span class="pre">std_msgs::Float32MultiArray</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Subscriber:</p>
+<ul>
+<li><p>start_follow</p>
+<ul>
+<li><p>topic_name: <code class="docutils literal notranslate"><span class="pre">/hri/human_following/start_follow</span></code></p></li>
+<li><p>topic_type:  <code class="docutils literal notranslate"><span class="pre">std_msgs::Bool</span></code></p></li>
+</ul>
+</li>
+<li><p>legs_position</p>
+<ul>
+<li><p>topic_name: <code class="docutils literal notranslate"><span class="pre">/hri/leg_finder/leg_poses</span></code></p></li>
+<li><p>topic_type:</p></li>
+</ul>
+</li>
+<li><p>potetial_fields_force</p>
+<ul>
+<li><p>topic_name: <code class="docutils literal notranslate"><span class="pre">/navigation/obs_avoid/pot_fields/rejective_force</span></code></p></li>
+<li><p>topic_type:</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>*Note: please note that the complete name of the topics can be different if you are using a launch file for running the <code class="docutils literal notranslate"><span class="pre">human_folower</span></code> and <code class="docutils literal notranslate"><span class="pre">leg_finder</span></code> nodes. For instance, if you are using <code class="docutils literal notranslate"><span class="pre">takeshi.launch</span></code> the name for the start topic belong to <code class="docutils literal notranslate"><span class="pre">hri</span></code> (Human Robot Interaction) namespace, so the complete topic name might be  <code class="docutils literal notranslate"><span class="pre">/hri/human_following/start_follow</span></code>, and so on.</p>
+</div>
+<div class="section" id="use">
+<h2>Use<a class="headerlink" href="#use" title="Permalink to this headline">¶</a></h2>
+<p>A launch file can be used for launch the ROS nodes needed, it is located in <code class="docutils literal notranslate"><span class="pre">takeshi_start/launch/human_follower.launch</span></code>, once the two ROS nodes are running <code class="docutils literal notranslate"><span class="pre">leg_finder_node</span></code> will be waiting for the topic <code class="docutils literal notranslate"><span class="pre">/hri/leg_finder/enable</span></code> when it occur  the leg_finder will be looking for human legs. The <code class="docutils literal notranslate"><span class="pre">/hri/leg_finder/legs_found</span></code> topic will be published when human legs were found whit a <code class="docutils literal notranslate"><span class="pre">True</span></code> value, otherwise the topic will be published with a <code class="docutils literal notranslate"><span class="pre">False</span></code> value when the human legs are lost.</p>
+<p>Once you have received the topic that legs were found, you need publish the topic <code class="docutils literal notranslate"><span class="pre">/hri/human_following/start_follow</span></code> with a <code class="docutils literal notranslate"><span class="pre">True</span></code> value for enable the robot movement. For stop human tracking you need publish it once again with a <code class="docutils literal notranslate"><span class="pre">False</span></code> value.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Human Follower</a><ul>
+<li><a class="reference internal" href="#leg-finder"><code class="docutils literal notranslate"><span class="pre">leg_finder</span></code></a></li>
+<li><a class="reference internal" href="#id1"><code class="docutils literal notranslate"><span class="pre">human_follower</span></code></a></li>
+<li><a class="reference internal" href="#use">Use</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">ROBOT  TAKESHI</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/HF_README.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="index.html" title="ROBOT TAKESHI"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Robot Takeshi 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Edgar Vazquez.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>QR_reader &#8212; Robot Takeshi 0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Robot Takeshi 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="qr-reader">
+<h1>QR_reader<a class="headerlink" href="#qr-reader" title="Permalink to this headline">¶</a></h1>
+<p>PUMAS Team by Mauricio Matamoros have develop a ROS node that provides publishers and subscribers for QR decoder.</p>
+<p>This node is on Pumas repository. The exact location is: <code class="docutils literal notranslate"><span class="pre">HSR_PUMAS/catkin_ws/src/vision/qr_reader</span></code>. So, you can copy the <code class="docutils literal notranslate"><span class="pre">qr_reader</span></code>  folder and paste on your <code class="docutils literal notranslate"><span class="pre">ROS</span> <span class="pre">workspace</span></code>.</p>
+<ul class="simple">
+<li><p>subscriber:  <code class="docutils literal notranslate"><span class="pre">qr/start_qr</span></code>  type: <code class="docutils literal notranslate"><span class="pre">Bool</span></code></p></li>
+<li><p>publisher: <code class="docutils literal notranslate"><span class="pre">qr/recognized</span></code> type: <code class="docutils literal notranslate"><span class="pre">String</span></code></p></li>
+</ul>
+<p>*Note: please note that the complete name of the topics can be different if you are using a launch file for running the <code class="docutils literal notranslate"><span class="pre">qr</span> <span class="pre">node</span></code>. For instance, if you are using <code class="docutils literal notranslate"><span class="pre">takeshi.launch</span></code> the name for the start topic belong to vision namespace, so the complete topic name might be  <code class="docutils literal notranslate"><span class="pre">/vision/qr/start_qr</span></code>, and so on.</p>
+</div>
+<div class="section" id="dependencies">
+<h1>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h1>
+<p>Cpp library   <code class="docutils literal notranslate"><span class="pre">libzbar</span></code> is required. CMakeLists.txt already contains the dependencies required but <code class="docutils literal notranslate"><span class="pre">libzbar</span></code> is required.</p>
+<p>You can install the package with the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install libzbar-dev
+</pre></div>
+</div>
+<div class="section" id="use">
+<h2>Use<a class="headerlink" href="#use" title="Permalink to this headline">¶</a></h2>
+<p>There are some <code class="docutils literal notranslate"><span class="pre">cpp</span></code> functions that can help you with this code. This functions are coded in c++, and they are located into <code class="docutils literal notranslate"><span class="pre">catkin_ws/src/tools/takeshi_tools/src/TakeshiVision.cpp</span></code>.</p>
+<p>The qr_reader node is waiting for a boolean message the name of the subscriber is <code class="docutils literal notranslate"><span class="pre">/vision/qr/start_qr</span></code> and is the type boolean. This is needed to be called at the beginning for start the qr_reader.</p>
+<p>After that, the qr_reader node will return the string with the information contend into the QR code.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">QR_reader</a></li>
+<li><a class="reference internal" href="#dependencies">Dependencies</a><ul>
+<li><a class="reference internal" href="#use">Use</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/QR_README.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="index.html">Robot Takeshi 0.0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Edgar Vazquez.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.
+    </div>
+  </body>
+</html>

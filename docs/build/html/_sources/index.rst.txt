@@ -12,10 +12,10 @@ This repository is for work whit Service Robot **HSR**\ , we are a group of rese
 ----
 
 INSTALL
-^^^^^^^
+=======
 
 Using CMUsphinx with Takeshi
-============================
+----------------------------
 
 In order to drop the MS windows for voice recognition we can use
 pocketSphinx integration with ROS provided by Mr Julio Profe.
@@ -83,12 +83,34 @@ file with one line per each phrase you want to recognize. Example taken from lmt
 
 Finally you need a grammar file, this uses a rather cumbresome sintax so please refer to existing examples provides on the hri/cmusphinx package.
 
-Documentation
--------------
+Human Robot Interaction
+=======================
 
-`QR Documentation <https://github.com/takeshisToCoding/Takeshi-Documentation/tree/master/catkin_ws/src/vision/qr_reader>`_
+Human Follower Node
+-------------------
+.. toctree::
+   :maxdepth: 2
+   :caption: Here is a brief description of Human Follower Node:
 
-`Human Follower Documentation <https://github.com/takeshisToCoding/Takeshi-Documentation/tree/master/catkin_ws/src/hri/human_following>`_
+   HF_README.md
+
+   
+QR Reader Node
+--------------
+.. toctree::
+   :maxdepth: 2
+   :caption: Here is a brief description of Human Follower Node:
+
+   QR_README.md 
+
+   
+   
+Documentation GITHUB
+--------------------
+
+`QR Documentation (github link) <https://github.com/takeshisToCoding/Takeshi-Documentation/tree/master/catkin_ws/src/vision/qr_reader>`_
+
+`Human Follower Documentation (github link) <https://github.com/takeshisToCoding/Takeshi-Documentation/tree/master/catkin_ws/src/hri/human_following>`_
 
 
 Indices and tables
