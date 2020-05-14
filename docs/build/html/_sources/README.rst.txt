@@ -1,8 +1,3 @@
-.. Robot Takeshi documentation master file, created by
-   sphinx-quickstart on Mon Sep  9 19:22:18 2019.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 
 ROBOT  TAKESHI
 ^^^^^^^^^^^^^^
@@ -89,12 +84,3 @@ Documentation
 `QR Documentation <https://github.com/takeshisToCoding/Takeshi-Documentation/tree/master/catkin_ws/src/vision/qr_reader>`_
 
 `Human Follower Documentation <https://github.com/takeshisToCoding/Takeshi-Documentation/tree/master/catkin_ws/src/hri/human_following>`_
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
